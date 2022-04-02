@@ -1,2 +1,2 @@
 # Negocios-Digitais
- treinando
+ treinando...
