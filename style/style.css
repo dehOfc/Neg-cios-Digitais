@@ -33,6 +33,13 @@ header {
     min-height: 150px;
     padding-top: 40px;
 }
+/*
+header img.menu {
+    width: 20px;
+    float: right;
+    border: 3px solid var(--cor04);
+    padding: 10px;
+}*/
 
 nav {
     background-color: var(--cor4);
