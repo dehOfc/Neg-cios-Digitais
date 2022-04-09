@@ -52,11 +52,64 @@ header {
     position: relative;
 }
 
+.barra{
+    width: auto;
+    height: 20px;
+    background: #17181b;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+.barra a{
+    text-decoration: none;
+    color: white;
+}
+
+.barra a:hover{
+    color:#fa105ef6;
+}
+
+.menu{
+    display: flex;
+}
+
+.menu li{
+    margin-left: 10px;
+}
+.menu li a{
+    display: block;
+    padding: 10px;
+}
+
 .img-wrapper{
     width: 100%;
     height: 100%;
     overflow: hidden;
     background-color: rgba( 0, 0, 0, 0.8) ;
+}
+
+.message{
+    width: 234px;
+    animation: digitando 3s steps(25), blink .4s infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+}
+
+@keyframes digitando{
+    from{
+        width: 0;
+    }
+}
+
+@keyframes blink{
+    40%{
+        border-color: rgba(255, 255, 255, 0.2);
+    }
 }
 
 header img {
@@ -142,42 +195,6 @@ header img {
         opacity: 1;
     }
 }
-
-nav {
-    background-image: linear-gradient(to bottom, #EC576B, #bd003c );
-    padding: 4px;
-    z-index: 102; 
-}
-
-nav p{
-    font-size: 16px;
-    margin-right: 2rem;
-    text-align:right;
-    font-family: var(--font-secundary);
-}
-
-nav .baner-nic{
-    margin: 0;
-    top: 0px;
-    left: 0px;
-    position:absolute;
-    position: fixed;
-    z-index: 100;
-}
-/*
-nav > a {
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition-duration: 0.5s;
-}
-
-nav > a:hover {
-    background-color: var(--cor1);
-    color: var(--cor4);
-}*/
 
 main {
     min-width: 300px;
