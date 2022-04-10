@@ -35,7 +35,7 @@ html{
 
 body {
     background-color:white ;
-    font-family: var(--font-secundary);
+    font-family: var(--fonte-padrao);
 }
 
 a.externo::after {
@@ -43,9 +43,6 @@ a.externo::after {
 }
 
 header {
-    /*background-image: linear-gradient(to bottom, var(--cor0), var(--cor4));
-    min-height: 150px;
-    /*padding-top: 40px;*/
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -93,7 +90,7 @@ header {
 }
 
 .message{
-    width: 234px;
+    width: 130px;
     animation: digitando 3s steps(25), blink .4s infinite alternate;
     white-space: nowrap;
     overflow: hidden;
@@ -118,10 +115,6 @@ header img {
     object-fit: cover;
     opacity: 0.5;
     animation: zoom 25s;
-    /*width: 500px;
-    float: left;
-    border: 3px solid var(--cor04);
-    padding: 10px;*/
 }
 
 .img-wrapper img{
@@ -214,7 +207,7 @@ main img {
 }
 
 main img.pequeno {
-    max-width: 600px;
+    max-width: 250px;
     display: block;
     margin: auto;
     margin-top: 30px;
@@ -239,12 +232,12 @@ div.video > iframe {
 
 main h1 {
     color: var(--cor4);
-    font-family: var(--fonte-destaque);
+    font-family: var(--font-primary);
     margin: 20px 0px;
 }
 
 main h2 {
-    font-family: var(--fonte-destaque);
+    font-family: var(--font-primary);
     color: var(--cor3);
     
 }
@@ -253,17 +246,18 @@ main p {
     margin: 15px 0px;
     text-align: justify;
     text-indent: 30px;
+    line-height: 1.7rem;
 }
 
 main a {
     text-decoration: none;
     font-weight:  bold;
-    color: var(--cor4);
+    color: var(--cor3);
 }
 
 main a:hover {
     text-decoration: underline;
-    color: var(--cor2);
+    color: var(--cor1);
 }
 
 main strong {
@@ -281,7 +275,7 @@ aside {
 }
 
 aside > h3 {
-    font-family: var(--fonte-destaque);
+    font-family: var(--font-primary);
     background-color: var(--cor4);
     color: white;
     padding: 10px;
@@ -290,11 +284,115 @@ aside > h3 {
 }
 
 aside > ul {
-    list-style-type: '\2714\00A0\00A0';
+    list-style-type: "\2714\00A0\00A0";
     list-style-position: inside;
     padding: 15px;
    
     
+}
+
+.sessao-contato{
+    margin-top: 1rem;
+    width: 100%;
+    height: 100vh;
+    background: #da006a;
+    background: -webkit-linear-gradient(to right, #fb0a5a, #ca004e);  
+    background: linear-gradient(to right, #fd1764, #c2003d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contato-wrapper{
+    width: 60%;
+    height: 30rem;
+    display: flex;
+    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(22, 22, 22, 0.9));
+    box-shadow: 0 3rem 5rem rgba( 0, 0, 0, 5);
+}
+
+.contato-left{
+    width: 35%;
+    background-size: cover;
+}
+
+.contato-right{
+    width: 65%;
+    background-color: #eee;
+    padding: 1rem 3rem 3rem 3rem;
+}
+
+.sessao-contato h1{
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-primary);
+    color: #c2003d;
+    font-size: 3rem;
+    font-weight: lighter;
+}
+
+.sessao-contato form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group{
+    position: relative;
+}
+
+.field{
+    background-color: transparent;
+    border: none;
+    width: 20rem;
+    font-size: 1.5rem;
+    font-family: var(--font-secundary);
+    border-bottom: 2px solid #c2003d;
+    height: 3rem;
+    outline: none;
+    margin: 1rem 0;
+}
+
+.input-group textarea{
+    padding-top: 1rem;
+    max-width: 20rem;
+    max-height: 3rem;
+}
+
+.field-label{
+    position: absolute;
+    left: 0%;
+    top: 2rem;
+    font-size: 1.2rem;
+    font-family: var(--font-secundary);
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.field:focus ~ label{
+    top:0;
+    font-size: 1rem;
+}
+
+
+.field:focus{
+    border-bottom: 1px solid;
+}
+
+.btn-submit{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    width: 100%;
+    height: 2rem;
+    margin-top: 1rem;
+}
+
+.btn-submit:hover{
+    color:white;
+    background: linear-gradient(to right, #fd1764, #c2003d); 
+    border-radius: 5px;
+    border: none;
 }
 
 footer{
